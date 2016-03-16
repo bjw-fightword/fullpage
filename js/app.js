@@ -1,0 +1,198 @@
+$(function(){
+	$("#fullpage").fullpage({
+		anchors:['a1','a2','a3','a4','a5','a6','a7','a8','a9','a10','a11'],
+		easing:'linear',
+		paddingTop:50,
+		resize:true,
+		scrollingSpeed:1500,
+		fixedElements:$('#header'),
+		navigation:true,
+		navigationPosition:'right',
+		css:true,
+		touchSensitivity:10,
+		continuousVertical:true,
+		setAllowScrolling:(true,'up','down'),
+		afterLoad: function(anchorLink,index){
+		  	if(index==1){
+		  		move('.seq-1').set('opacity',1).delay('1s').end();
+		  		move('.seq-2').set('opacity',1).delay('1.5s').end();
+		  		move('.seq-3').set('opacity',1).delay('2s').end();
+		  		move('.seq-4').set('opacity',1).delay('2.5s').end();
+		  		move('.seq-5').set('opacity',1).delay('3s').end();
+		  		move('.seq-6').set('opacity',1).delay('3.5s').end();
+		  		move('.seq-7').set('opacity',1).delay('4s').end();
+		  	}
+		  	if(index==7){
+		  		move(".s7-bg1").set('opacity',1).delay('1s').set('left','31%').duration('2s').ease("linear").end();
+		  		move(".s7-bg2").set('opacity',1).delay('1s').set('right','31%').duration('2s').ease("linear").end();
+		  		setTimeout(function(){
+		  			move(".s7-bg1").y(-150).duration('1s').ease("linear").end();
+		  			move(".s7-bg2").y(-150).duration('1s').ease("linear").end();
+		  			move(".s7-middle>h2").set('opacity',1).y(50).delay('2s').duration('1s').end();
+		  			move(".s7-middle>p").set('opacity',1).y(70).delay('3s').duration('1s').end();
+		  			move(".s6-redline").set('opacity',1).y(60).duration('1s').delay('2.5s').end();
+		  		},7000)
+		  	}
+		  	if(index==11){
+		  		move(".s11-h2").set('opacity',1).delay('2s').set('margin-bottom',0).duration('3s').ease('linear').end();
+		  		move(".s11-p").set('opacity',1).delay('3s').set('margin-top',0).duration('3s').ease('linear').end();
+		  		move(".s11-red-line").set('opacity',1).set('width','100%').delay('2s').ease('linear').duration('2s').end();
+		  	}
+		  	if(index==10){
+		  		move(".s10-h2").set('opacity',1).duration('1s').ease('linear').end();
+		  		move(".s10-red-line").set('opacity',1).set('width','100%').delay('1s').ease('linear').duration('2s').end();
+		  		move(".s10-p").set('opacity',1).duration('2s').delay('2s').ease('linear').end();
+		  		move("#form").set('opacity',1).delay('3s').duration('2s').ease('linear').end();
+		  	}
+		  	if(index==8){
+		  		move(".s8-h2").set('opacity',1).duration('1s').ease('linear').end();
+		  		move(".s8-red-line").set('opacity',1).set('width','100%').delay('1s').ease('linear').duration('2s').end();
+		  		move(".s8-p").set('opacity',1).duration('2s').delay('2s').ease('linear').end();
+		  	}
+		  	if(index==9){
+		  		move(".s9-h2").set('opacity',1).duration('1s').ease('linear').end();
+		  		move(".s9-red-line").set('opacity',1).set('width','100%').delay('1s').ease('linear').duration('1s').end();
+		  		move(".s9-p").set('opacity',1).duration('1s').delay('2s').ease('linear').end();
+		  		move(".glow").set('opacity',1).duration('1s').delay('3s').ease('linear').end();
+		  		move(".s9-img-one").set('opacity',1).duration('1s').delay('4s').ease('linear').end();
+		  		move(".s9-img-two").set('opacity',1).duration('1s').delay('5s').ease('linear').end();
+		  		move(".s9-text-two").set('opacity',1).duration('1s').delay('5s').ease('linear').end();
+		  		move(".s9-text-one").set('opacity',1).duration('1s').delay('5s').ease('linear').end();
+		  	}
+		  	if(index==2){
+		  		move(".bean-l1").set('opacity',1).ease('linear').duration('1s').end();
+		  		move(".bean-r1").set('opacity',1).ease('linear').duration('1s').end();
+
+		  		move(".bean-l2").set('opacity',1).duration('1s').delay('.5s').ease('linear').end();
+		  		move(".bean-r2").set('opacity',1).duration('1s').delay('.5s').ease('linear').end();
+
+		  		move(".bean-l3").set('opacity',1).duration('1s').delay('1s').ease('linear').end();
+		  		move(".bean-r3").set('opacity',1).duration('1s').delay('1s').ease('linear').end();
+
+		  		move(".bean-l4").set('opacity',1).duration('1s').delay('1.5s').ease('linear').end();
+		  		move(".bean-r4").set('opacity',1).duration('1s').delay('1.5s').ease('linear').end();
+
+		  		move(".s2-h2").set('opacity',1).duration('1s').delay('2s').ease('linear').end();
+		  		move(".s2-red-line").set('opacity',1).set('width','100%').duration('1s').delay('2.5s').ease('linear').end();
+
+		  		move(".s2-p").set('opacity',1).duration('1s').delay('3s').ease('linear').end();
+		  		move(".s2-img").set('opacity',1).duration('1s').delay('3.5s').ease('linear').end();
+		  	}
+		  	if(index==3){
+		  		move(".red-mask").ease('linear').set('top','30%').duration('1s').end();
+		  	}
+		  	if(index==4){
+		  		move(".s4-h2").set('opacity',1).duration("1s").end()
+		  		move(".s4-red-line").set('opacity',1).set('width','100%').delay('1s').duration("1s").end()
+		  		move(".s4-p").set('opacity',1).delay('2s').duration("1s").end()
+		  	}
+		  	if(index==6){
+		  		move(".s6-1").set('opacity',1).duration('1s').delay('5s').end();
+		  		move(".s6-2").set('opacity',1).duration('1s').delay('5.5s').end();
+		  		move(".s6-3").set('opacity',1).duration('1s').delay('6s').end();
+		  		move(".s6-4").set('opacity',1).duration('1s').delay('6.5s').end();
+		  		move(".s6-5").set('opacity',1).duration('1s').delay('7s').end();
+		  		move(".s6-6").set('opacity',1).duration('1s').delay('7.5s').end();
+		  		move(".s6-h2").set('opacity',1).duration('1s').delay('8s').end();
+		  		move(".s6-red-line").set('opacity',1).duration('1s').delay('8.5s').set('width','100%').end();
+		  		move(".s6-p").set('opacity',1).duration('1s').delay('9s').end();
+		  	}
+		  	if(index==5){
+		  		move(".s5-1").set("opacity",1).duration("1s").delay('4s').end();
+		  		move(".s5-2").set("opacity",1).duration("1s").delay('4.5s').end();
+		  		move(".s5-3").set("opacity",1).duration("1s").delay('5s').end();
+		  		move(".s5-4").set("opacity",1).duration("1s").delay('5.5s').end();
+		  		move(".s5-5").set("opacity",1).duration("1s").delay('6s').end();
+
+		  		move(".s5-h2").set("opacity",1).duration("1s").delay('6.5s').end();
+		  		move(".s5-red-line").set("opacity",1).duration("1s").delay('6.5s').set('width','100%').end();
+		  		move(".s5-p").set("opacity",1).duration("1s").delay('7s').end();
+
+		  	}
+
+		 },
+		onLeave:function(index, nextIndex, direction){
+		  	if(index==1){
+		  		move('.seq-1').set('opacity',0).end();
+		  		move('.seq-2').set('opacity',0).end();
+		  		move('.seq-3').set('opacity',0).end();
+		  		move('.seq-4').set('opacity',0).end();
+		  		move('.seq-5').set('opacity',0).end();
+		  		move('.seq-6').set('opacity',0).end();
+		  		move('.seq-7').set('opacity',0).end();
+		  	}
+		  	if(index==7){
+		  		move(".s7-bg1").set('opacity',0).set('left','0%').y(0).ease("linear").end();
+		  		move(".s7-bg2").set('opacity',0).set('right','0%').y(0).ease("linear").end();
+		  		move(".s7-middle>h2").set('opacity',0).y(0).end();
+		  		move(".s7-middle>p").set('opacity',0).y(50).end();
+		  		move(".s7-redline").set('opacity',0).y(0).end();
+		  	}
+		  	if(index==11){
+		  		move(".s11-h2").set('opacity',0).set('margin-bottom',50).end();
+		  		move(".s11-p").set('opacity',0).set('margin-top',50).end();
+		  		move(".s11-red-line").set('opacity',0).set('width','100%').end();
+		  	}
+		  	if(index==10){
+		  		move(".s10-h2").set('opacity',0).end();
+		  		move(".s10-red-line").set('opacity',0).set('width','100%').end();
+		  		move(".s10-p").set('opacity',0).end();
+		  		move("#form").set('opacity',0).end();
+		  	}
+		  	if(index==8){
+		  		move(".s8-h2").set('opacity',0).end();
+		  		move(".s8-red-line").set('opacity',0).set('width','100%').end();
+		  		move(".s8-p").set('opacity',0).end();
+		  	}
+		  	if(index==9){
+		  		move(".s9-h2").set('opacity',0).end();
+		  		move(".s9-red-line").set('opacity',0).set('width',0).end();
+		  		move(".s9-p").set('opacity',0).end();
+		  		move(".glow").set('opacity',0).end();
+		  		move(".s9-img-one").set('opacity',0).end();
+		  		move(".s9-img-two").set('opacity',0).end();
+		  		move(".s9-text-two").set('opacity',0).end();
+		  		move(".s9-text-one").set('opacity',0).end();
+		  	}
+		  	if(index==2){
+		  		move(".bean-l1").set('opacity',0).end();
+		  		move(".bean-r1").set('opacity',0).end();
+
+		  		move(".bean-l2").set('opacity',0).end();
+		  		move(".bean-r2").set('opacity',0).end();
+
+		  		move(".bean-l3").set('opacity',0).end();
+		  		move(".bean-r3").set('opacity',0).end();
+
+		  		move(".bean-l4").set('opacity',0).end();
+		  		move(".bean-r4").set('opacity',0).end();
+
+		  		move(".s2-h2").set('opacity',0).end();
+		  		move(".s2-red-line").set('opacity',0).set('width','100%').end();
+
+		  		move(".s2-p").set('opacity',0).end();
+		  		move(".s2-img").set('opacity',0).end();
+		  	}
+		  	if(index==3){
+		  		move(".red-mask").set('top','130%').duration('1s').end();
+		  	}
+		  	if(index==4){
+		  		move(".s4-h2").set('opacity',0).end()
+		  		move(".s4-red-line").set('opacity',0).set('width',0).end()
+		  		move(".s4-p").set('opacity',0).delay('2s').end()
+		  	}
+		  	if(index==5){
+		  		move(".s5-1").set("opacity",1).end();
+		  		move(".s5-2").set("opacity",1).end();
+		  		move(".s5-3").set("opacity",1).end();
+		  		move(".s5-4").set("opacity",1).end();
+		  		move(".s5-5").set("opacity",1).end();
+
+		  		move(".s5-h2").set("opacity",1).end();
+		  		move(".s5-red-line").set("opacity",1).set('width',0).end();
+		  		move(".s5-p").set("opacity",1).end();
+
+		  	}
+		}
+	})
+})
